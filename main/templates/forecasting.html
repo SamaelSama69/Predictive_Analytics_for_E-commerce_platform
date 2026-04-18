@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Sales Forecast</h1>
+
+<form method="POST">
+    <input type="number" name="periods" placeholder="Number of months">
+    <button type="submit">Predict</button>
+</form>
+
+{% if result %}
+<div class="card">
+    <h3>Forecast:</h3>
+    <ul>
+        {% for p, v in result %}
+        <li>{{ p }} → ₹{{ v }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
+
+{% endblock %}

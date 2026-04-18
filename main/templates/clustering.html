@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Customer Clustering</h1>
+
+<form method="POST">
+    <input type="number" step="any" name="f1" placeholder="Feature 1">
+    <input type="number" step="any" name="f2" placeholder="Feature 2">
+    <input type="number" step="any" name="f3" placeholder="Feature 3">
+    <button type="submit">Predict Cluster</button>
+</form>
+
+{% if result %}
+<div class="card">
+    <h3>Cluster:</h3>
+    <p>{{ result }}</p>
+</div>
+{% endif %}
+
+{% endblock %}

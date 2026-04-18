@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sentiment Analysis</title>
+</head>
+<body>
+
+    <h1>Customer Sentiment Analysis</h1>
+
+    <form method="POST" action="/sentiment">
+        <textarea name="review_text" rows="5" cols="50" placeholder="Enter review..."></textarea>
+        <br><br>
+        <button type="submit">Analyze</button>
+    </form>
+
+    {% if result %}
+        <h2>Result:</h2>
+        <pre>{{ result }}</pre>
+    {% endif %}
+
+</body>
+</html>

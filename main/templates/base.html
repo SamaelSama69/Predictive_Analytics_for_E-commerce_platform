@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-commerce Analytics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav>
+    <h2>📊 E-Commerce Analytics</h2>
+    <a href="/">Home</a>
+    <a href="/sentiment">Sentiment</a>
+    <a href="/clustering">Clustering</a>
+    <a href="/forecasting">Forecasting</a>
+</nav>
+
+<div class="container">
+    {% block content %}{% endblock %}
+</div>
+
+</body>
+</html>
